@@ -1,0 +1,22 @@
+
+module main
+sub main()
+
+dim wort as string=console.readline()
+dim a as integer=len(wort)+1
+dim b as integer=0
+
+for x as integer=1 to len(wort)
+if mid(wort,x,1)=mid(wort,a-x,1) then
+b=b+1
+end if
+next
+
+if b=len(wort) then
+console.writeline("YES")
+else
+console.writeline("NO")
+end if
+
+end sub
+end module
